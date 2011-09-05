@@ -1,0 +1,15 @@
+#summary Adding stereoscopy to your own app
+
+== Check availability ==
+
+Use Stereoscopy.available3DProvider to get an instance of StereoscopyProvider. Guice users can use Stereoscopy.available3DProviderClass for binding. This is when the actual (slow) check for availability is done.
+
+Now that you have a StereoscopyProvider, call isAvailable() on it to determine if your device features an autostereoscopic display. This check is very fast, usually returning a constant.
+
+
+== Turning on stereoscopy ==
+
+Call setupSurface() in your onSurfaceChanged method (assuming GL) passing it your GLSurfaceView. This will switch your screen to autostereoscopic with the each half of the screen containing the image for the corresponding eye.
+
+
+That's it folks. This is what works for me. If you have a different use case please let me know.
