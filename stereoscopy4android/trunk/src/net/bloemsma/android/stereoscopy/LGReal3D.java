@@ -18,8 +18,7 @@ public class LGReal3D implements StereoscopyProvider {
 			LGReal3D.class.getClassLoader().loadClass("com.lge.real3d.Real3D");
 			return true;
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// ignore
 		}
 		return false;
 	}
