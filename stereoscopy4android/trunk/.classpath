@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="/Users/guus/Applications/android-sdk-mac_86/add-ons/addon_htc_sdk_for_phones_htc_10/libs/HTCExtension.jar"/>
-	<classpathentry kind="lib" path="/Users/guus/Applications/android-sdk-mac_86/add-ons/addon_real3d_lge_8/libs/real3d.jar"/>
 	<classpathentry kind="lib" path="/Users/guus/Applications/android-sdk-mac_86/platforms/android-8/android.jar"/>
+	<classpathentry kind="lib" path="/Users/guus/Applications/android-sdk-mac_86/add-ons/addon-opensense_sdk_for_phones-htc-10/libs/HTCExtension.jar"/>
+	<classpathentry kind="lib" path="/Users/guus/Applications/Xandroid-sdk-mac_86/add-ons/addon_real3d_lge_8/libs/real3d.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
