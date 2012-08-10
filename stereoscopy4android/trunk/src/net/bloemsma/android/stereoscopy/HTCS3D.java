@@ -13,7 +13,7 @@ public class HTCS3D implements StereoscopyProvider {
 		try {
 			HTCS3D.class.getClassLoader().loadClass("com.htc.view.DisplaySetting");
 			return true;
-		} catch (ClassNotFoundException e) {
+		} catch (Throwable e) {
 			// Ignore
 		}
 		return false;
@@ -32,7 +32,7 @@ public class HTCS3D implements StereoscopyProvider {
 				glSurface.getHolder().getSurface(),
 				true ? DisplaySetting.STEREOSCOPIC_3D_FORMAT_SIDE_BY_SIDE : DisplaySetting.STEREOSCOPIC_3D_FORMAT_OFF);
 			if (!formatResult)
-				Log.e("3D", "Couldn't format stereoscopic");
+				Log.e("HTC S3D", "Couldn't format stereoscopic");
 		} catch (NoClassDefFoundError e) {
 		} catch (UnsatisfiedLinkError usle) {
 		}
