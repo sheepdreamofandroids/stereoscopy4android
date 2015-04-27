@@ -1,0 +1,43 @@
+## Add the jar ##
+
+Do not choose the build target for either HTC nor LG since that would defeat the purpose.
+
+
+## Extend your AndroidManifest.xml ##
+
+Within 
+
+&lt;manifest/&gt;
+
+ but outside 
+
+&lt;application/&gt;
+
+ add:
+> <uses-feature android:name="lge.hardware.real3d.barrier.landscape" android:required="false" />
+
+Within 
+
+&lt;application/&gt;
+
+ add:
+> <uses-library android:name="com.lge.real3d" android:required="false" />
+
+For HTC, no changes to the manifest are required.
+
+
+## Check availability ##
+
+Use Stereoscopy.available3DProvider to get an instance of StereoscopyProvider. Guice users can use Stereoscopy.available3DProviderClass for binding. This is when the actual (slow) check for availability is done.
+
+Now that you have a StereoscopyProvider, call isAvailable() on it to determine if your device features an autostereoscopic display. This check is very fast, usually returning a constant.
+
+
+## Turning on stereoscopy ##
+
+Call setupSurface() in your onSurfaceChanged method (assuming GL) passing it your GLSurfaceView. This will switch your screen to autostereoscopic with the each half of the screen containing the image for the corresponding eye.
+
+You are still responsible for rendering the images for each eye separately. See
+
+
+That's it folks. This is what works for me. If you have a different use case please let me know.

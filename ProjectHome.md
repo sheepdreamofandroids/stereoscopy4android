@@ -1,0 +1,1 @@
+Both HTC and LG require you to choose their SDK as your build target in order to support their autostereoscopic screens. Unfortunately, you can only choose one. This tiny jar solves that dilemma.
